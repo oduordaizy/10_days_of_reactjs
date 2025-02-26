@@ -3,16 +3,40 @@ body{
 }
 
 /*********Navbar start *******************/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
 .logo{
     font-size: 3rem;
     color: #005689;
     font-weight: bold;
 }
-
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    color: #394a51;
+    
+}
+ul li:hover{
+    font-weight: bold;
+}
 /*********Navbar End *******************/
 
 
 /*********Card start *******************/
+.card{
+    border: 1px solid #007cb9;
+    padding: 2rem;
+    border-radius: 8px;
+}
+.card:hover{
+    transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
 
 
