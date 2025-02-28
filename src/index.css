@@ -13,7 +13,7 @@ body{
     color: #005689;
     font-weight: bold;
 }
-ul{
+nav ul{
     display: flex;
     flex-direction: row;
     gap: 30px;
@@ -21,23 +21,83 @@ ul{
     color: #394a51;
     
 }
-ul li:hover{
+nav ul li:hover{
     font-weight: bold;
 }
 /*********Navbar End *******************/
 
-
-/*********Card start *******************/
-.card{
-    border: 1px solid #007cb9;
-    padding: 2rem;
-    border-radius: 8px;
-}
-.card:hover{
-    transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+/*********Todo End *******************/
+.todo{
+    background: white;
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
+.inputContainer{
+    display: flex;
+    gap: 10px;
+}
 
+.inputContainer input{
+   flex: 1;
+    width: 80%;
+    padding: 8px;  
+}
+.inputContainer button{
+    padding: 8px 12px;
+    border: none;
+    color: white;
+    background-color: #007cb9;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.inputContainer button:hover{
+    background-color: #005689;
+}
 
-/*********Card End *******************/
+.todo ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.todo li{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.buttons{
+    display: flex;
+    gap: 5px;
+    
+}
+
+.buttons button{
+    background-color: #007cb9;
+    border: none;
+    padding : 4px 8px;
+    color: white;
+    border-radius: 4px;
+}
+
+.buttons button:last-child{
+    background-color: #ff895d;
+    color: white;
+    border: none;
+}
+li.completed span{
+    text-decoration: line-through;
+    color: gray;
+}
+li.completed button:first-child{
+    background-color: gray;
+}
+.buttons button:hover {
+    opacity: 0.8;
+  }
+
+/*********Todo End *******************/
