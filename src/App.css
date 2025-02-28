@@ -4,4 +4,7 @@
   padding: 1rem;  
 }
 
-
+.prodTools{
+  display: flex;
+  justify-content: space-between;
+}
