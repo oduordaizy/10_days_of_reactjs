@@ -30,8 +30,8 @@ nav ul li:hover{
 .todo{
     background: white;
     padding: 20px;
-    width: 70%;
-    margin: 0 auto;
+    width: 45%;
+    /* margin: 0 auto; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
@@ -101,3 +101,10 @@ li.completed button:first-child{
   }
 
 /*********Todo End *******************/
+
+/****Pomodoro***********/
+.pomodoro{
+    background-color: white;
+    width: 40%;
+    border-radius: 5px;
+}
