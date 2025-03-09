@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 import { weatherData } from '../types/weatherTypes';
 
 interface WeatherProps{
@@ -13,17 +12,28 @@ const Weather:React.FC<WeatherProps> = ({initialCity = ''}) => {
 
     const fetchWeather = async() => {
         try {
-            const api_key = process.env.REACT_APP_WEATHER_API_KEY;
+
+            const api_key = process.env.REACT_APP_WEATHER_API_KEY
             console.log("API Key:", api_key); 
             if (!api_key){
                 setError("API key is missing");
                 return;
             }
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
-            const response = await axios.get(url)
-            setWeatherData(response.data)
-            setError('')
+            // const response = await axios.get(url, {
+            //     withCredentials: true
+            // })
+
+           const response = await fetch (url)
+            if (!response.ok){
+                throw new Error("City Not Found")
+            }
+
+           const result = await response.json()
+           console.log(`Weather Data ${result}`)
+           setWeatherData(result)
+           setError('')
         }catch(err){
             console.error("Error fetching weather data:", err);
             setError('City Not Found')
