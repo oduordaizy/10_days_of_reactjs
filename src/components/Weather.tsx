@@ -6,19 +6,26 @@ interface WeatherProps{
     initialCity?: string;
 }
 
-const Weather:React.FC<WeatherProps> = () => {
-    const [city, setCity] = useState<string>('');
+const Weather:React.FC<WeatherProps> = ({initialCity = ''}) => {
+    const [city, setCity] = useState<string>(initialCity);
     const [weatherData, setWeatherData] = useState<weatherData | null> (null);
     const [error, setError] = useState<string>('')
 
     const fetchWeather = async() => {
         try {
-            const response = await axios.get(
-                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
-            )
+            const api_key = process.env.REACT_APP_WEATHER_API_KEY;
+            console.log("API Key:", api_key); 
+            if (!api_key){
+                setError("API key is missing");
+                return;
+            }
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api_key}`;
+
+            const response = await axios.get(url)
             setWeatherData(response.data)
             setError('')
         }catch(err){
+            console.error("Error fetching weather data:", err);
             setError('City Not Found')
             setWeatherData(null)
         }
