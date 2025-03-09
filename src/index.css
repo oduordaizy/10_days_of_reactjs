@@ -144,3 +144,47 @@ li.completed button:first-child{
     display: flex;
     justify-content: center;
 }
+
+/************Weather Component Start************/
+.weatherContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .weatherContainer form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .weatherContainer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .weatherContainer button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .weatherInfo {
+    text-align: center;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .weatherInfo img {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+  }
+/************Weather Component End************/
