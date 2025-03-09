@@ -17,7 +17,7 @@ const Quote:React.FC= () => {
     const response = await fetch(url,{
       method: "GET",
       headers:{
-        'X-Api-Key': 'pYVFy76PZ8Uszja+34floQ==5QHrjbyKEE4tQzSR'
+        'X-Api-Key': process.env.QUOTE_API
       }
     });
     if (!response.ok) {
