@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Quote from '../components/Quote'
 
 const Home: React.FC = () => {
   return (
     <div>
         <Navbar/>
-        <Quote/>
+        <div className="home">
+        <div className='textContent'>Manage your tasks, <br></br>and <br></br>track your productivity</div>
+        </div>
 
     </div>
   )
