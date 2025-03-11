@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Navbar from './Navbar';
 
 interface Task{
     text: string,
@@ -44,6 +45,8 @@ const TodoList: React.FC = () => {
     }
 
   return (
+    <div>
+        <Navbar/>
     <div className='todo'>
         <h2>Todo List</h2>
         <div className='inputContainer'>
@@ -68,6 +71,7 @@ const TodoList: React.FC = () => {
 
             ))}
         </ul>
+        </div>
     </div>
   )
 }

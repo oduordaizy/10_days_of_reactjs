@@ -46,8 +46,10 @@ const PomodoroFunction :React.FC<PomodoroProps> = ({isBreak}) => {
 
 
   return (
+    <div>
+    
     <div className='pomodoro'>
-      {/* <h1>POMODORO TIMER</h1> */}
+      
         <h2>{isBreak ? "Break" : "Work"}</h2>
         <p>{formatTime(time)}</p>
 
@@ -62,7 +64,7 @@ const PomodoroFunction :React.FC<PomodoroProps> = ({isBreak}) => {
             </button>
         </div>
 
-
+        </div>
     </div>
   )
 }
