@@ -1,19 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { LiaStudiovinari } from "react-icons/lia";
 
 const Navbar: React.FC = () => {   //React.FC just means react functional component
   return (
 
-    <nav className='navbar'>
-      <div className='logo'>Dashboard</div>
-        <ul>
-          <li>Home</li>
-          <li>My Courses</li>
-          <li>Certificates</li>
-          <li>Challenges</li>
-          <li>Badges</li>
-        </ul>
+    <div className='navbar'>
+      <Link to='/'><div className='logo'> <LiaStudiovinari />focusly</div></Link>
+        <nav>
+          <Link to='/'>Home</Link>
+          <Link to='/todo'>Todo List</Link>
+          <Link to='/pomodoro'>Pomodoro</Link>
+          <Link to='/weather'>Weather</Link>
+          <Link to='/quotes'>Quotes</Link>
+        </nav>
 
-    </nav>
+    </div>
   )
 }
 
