@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { weatherData } from '../types/weatherTypes';
+import Navbar from './Navbar';
 
 interface WeatherProps{
     initialCity?: string;
@@ -13,7 +14,7 @@ const Weather:React.FC<WeatherProps> = ({initialCity = ''}) => {
     const fetchWeather = async() => {
         try {
 
-            const api_key = process.env.REACT_APP_WEATHER_API_KEY
+            const api_key = import.meta.env.VITE_WEATHER_API_KEY
             console.log("API Key:", api_key); 
             if (!api_key){
                 setError("API key is missing");
@@ -48,6 +49,8 @@ const Weather:React.FC<WeatherProps> = ({initialCity = ''}) => {
     }
 
   return (
+    <div>
+        <Navbar/>
     <div className='weatherContainer'>
         <form onSubmit={handleSubmit}>
             <input type='text' placeholder='Enter a City name' 
@@ -75,7 +78,7 @@ const Weather:React.FC<WeatherProps> = ({initialCity = ''}) => {
         
         
 
-
+        </div>
     </div>
   )
 }

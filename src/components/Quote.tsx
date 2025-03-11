@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Navbar from './Navbar'
 
 // interface quoteProps {
 //   quote: string,
@@ -17,7 +18,7 @@ const Quote:React.FC= () => {
     const response = await fetch(url,{
       method: "GET",
       headers:{
-        'X-Api-Key': process.env.QUOTE_API
+        'X-Api-Key': import.meta.env.VITE_QUOTE_API
       }
     });
     if (!response.ok) {
@@ -50,6 +51,7 @@ const Quote:React.FC= () => {
 
   return (
     <div>
+      <Navbar/>
       <h1>Daily Motivational Quote</h1>
       {error ? (
         <p style={{ color: 'red' }}>{error}</p>
