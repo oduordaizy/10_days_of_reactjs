@@ -9,6 +9,10 @@ body{
     background-color: #d5eeff;
 }
 
+[data-theme="dark"]{
+    --bg-color: #121212;
+    --text-color: #ffffff;
+}
 /*********Navbar start *******************/
 .navbar{
     display: flex;
