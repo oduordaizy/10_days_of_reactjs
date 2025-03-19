@@ -1,31 +1,52 @@
-# #10DaysOfReactJS Challenge  
+# focusly - 
 
-## Day 1: Setting Up and Creating Components  
-- Set up the React project.  
-- Create **Navbar** and **Card** components.  
+A simple productivity app done as part of the #10daysofReactjsChallenge
 
-## Day 2: Todo List Component  
-- Create a **TodoList** component.  
-- Use `useState` for managing tasks.  
-- Add task persistence using `localStorage`.  
+Features
 
-## Day 3: Productivity Timer  
-- Implement a timer for productivity cycles (25-min work, 5-min break).  
+✅ Component-based Structure
 
-## Day 4: Real-time Weather App  
-- Fetch real-time weather using an API (e.g., OpenWeather).  
-- Use `fetch()` or `axios` to retrieve data.  
-- Display temperature, city, and weather icons.  
+✅ Todo List Component
 
-## Day 5: Daily Motivational Quote  
-- Fetch a random quote from an API (e.g., Quotable).  
-- Display a new quote every day.  
+✅ Productivity Timer
 
-## Day 6: Light/Dark Theme Switch  
-- Implement a **light/dark mode** toggle.  
-- Use `useContext` to manage the theme globally.  
-- Save user preferences in `localStorage`.  
+✅ Daily Motivational Quote- Fetched a random motivational quote from an API (e.g., Quotable).
+
+✅ Light/Dark Theme Switch
 
 
+## Installation
 
+Clone the repository:
+
+git clone https://github.com/oduordaizy/focusly.git
+cd productivity-app
+
+## Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm start
+
+## Technologies Used
+
+React.js
+
+CSS (for styling)
+
+localStorage (for persistence)
+
+OpenWeather API (for real-time weather updates)
+
+Quotable API (for daily quotes)
+
+## Future Enhancements
+
+Add task categories & priorities.
+
+Implement user authentication.
+
+Enhance animations and UI/UX.
 
